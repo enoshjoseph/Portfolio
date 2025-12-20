@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+/* 🔥 Flame gradient animation */
+@keyframes flame-sweep {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-flame {
+  background-size: 200% 200%;
+  animation: flame-sweep 4s ease-in-out infinite;
+}
+
+/* 💙💜 Blue–Violet gradient animation */
+@keyframes aurora-sweep {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-aurora {
+  background-size: 200% 200%;
+  animation: aurora-sweep 6s ease-in-out infinite;
+}
+
+/* Glossy blue blink animation */
+@keyframes blue-blink {
+  0%, 100% {
+    opacity: 0.6;
+    box-shadow: 0 0 8px rgba(59,130,246,0.4);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 18px rgba(59,130,246,0.8);
+  }
+}
+
+.animate-blue-blink {
+  animation: blue-blink 2s ease-in-out infinite;
+}
+
+.glow-line {
+  position: relative;
+  box-shadow:
+    0 0 10px rgba(59,130,246,0.7),
+    0 0 24px rgba(59,130,246,0.55),
+    0 0 48px rgba(59,130,246,0.4);
+}
+
+.glow-line::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  background: radial-gradient(
+    circle,
+    rgba(59,130,246,0.45),
+    transparent 70%
+  );
+  filter: blur(10px);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+
+
+@keyframes blur-fade-in-y {
+  0% {
+    opacity: 0;
+    filter: blur(18px);
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+.animate-blur-fade-y {
+  animation: blur-fade-in-y 2s ease-out forwards;
+}
+/* Horizontal blur → fade → sharp entrance */
+@keyframes blur-fade-in-x {
+  0% {
+    opacity: 0;
+    filter: blur(20px);
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+}
+
+.animate-blur-fade-x {
+  animation: blur-fade-in-x 1.2s ease-out forwards;
+}
+
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee-left {
+  animation: marquee-left 45s linear infinite;
+}
+
+.animate-marquee-right {
+  animation: marquee-right 39s linear infinite;
+}
