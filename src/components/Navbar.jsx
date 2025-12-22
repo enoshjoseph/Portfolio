@@ -11,9 +11,9 @@ export default function Navbar() {
 
   const links = [
     { label: "Home", id: "home" },
-    { label: "Projects", id: "courses" },
-    { label: "Achievements", id: "css-artworks" },
-    { label: "Course Works", id: "my-setup" },
+    { label: "Projects", id: "projects" },
+    { label: "Achievements", id: "achiements" },
+
     { label: "Contact", id: "contact" },
   ];
 

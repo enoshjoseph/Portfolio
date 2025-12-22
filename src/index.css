@@ -1,5 +1,36 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  font-family: 'Satoshi', system-ui, sans-serif;
+}
+
+
+
+
 /* 🔥 Flame gradient animation */
 @keyframes flame-sweep {
   0% { background-position: 0% 50%; }
@@ -122,4 +153,92 @@
 
 .animate-marquee-right {
   animation: marquee-right 39s linear infinite;
+}
+
+
+@keyframes scrollFlash {
+  0% {
+    opacity: 0;
+    filter: blur(0);
+  }
+  30% {
+    opacity: 1;
+    filter: blur(2px);
+  }
+  60% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    filter: blur(0);
+  }
+}
+
+.animate-scroll-flash {
+  animation: scrollFlash 0.9s ease-out forwards;
+}
+
+
+/* Apple-style stagger reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.project-card {
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.project-card:not(:hover) {
+  transition-duration: 900ms;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.45s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+
+
+
+/* Apple-style reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
