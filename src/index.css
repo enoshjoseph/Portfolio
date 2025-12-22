@@ -29,6 +29,24 @@ html {
 }
 
 
+html, body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  scroll-padding-top: 100px;
+
+  overscroll-behavior: none;
+  /* prevent horizontal overscroll */
+  overflow-x: hidden;
+}
+
+#root{
+  overflow-x: hidden;
+}
+
+
+
 
 
 /* 🔥 Flame gradient animation */

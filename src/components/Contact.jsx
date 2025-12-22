@@ -5,10 +5,7 @@ export default function Contact() {
 
         {/* LEFT TITLE */}
         <div className="flex items-center">
-          <h2 className="text-5xl md:text-7xl
-  font-extrabold
-  text-white
-  tracking-tight">
+          <h2 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight">
             GET IN TOUCH
           </h2>
         </div>

@@ -12,8 +12,7 @@ export default function Navbar() {
   const links = [
     { label: "Home", id: "home" },
     { label: "Projects", id: "projects" },
-    { label: "Achievements", id: "achiements" },
-
+    { label: "Achievements", id: "achievements" },
     { label: "Contact", id: "contact" },
   ];
 
