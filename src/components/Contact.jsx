@@ -33,6 +33,13 @@ export default function Contact() {
             value="enoshjoseph"
             link="https://github.com/enoshjoseph"
           />
+          <ContactRow
+            label="Resume"
+            value="Download CV"
+            link="Resume/Enosh_Joseph_P_A.pdf"
+            download
+          />
+
 
         </div>
       </div>
