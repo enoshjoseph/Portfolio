@@ -36,7 +36,7 @@ html, body {
   background-color: #000;
   scroll-padding-top: 100px;
 
-  overscroll-behavior: none;
+  /* overscroll-behavior: none; */
   /* prevent horizontal overscroll */
   overflow-x: hidden;
 }
